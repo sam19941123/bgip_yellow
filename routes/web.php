@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/game','search@get_list');
+Route::get('/game/{id}','search@get_game_detail');
