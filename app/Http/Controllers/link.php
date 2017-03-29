@@ -18,4 +18,10 @@ class link extends Controller
         
         return back()->withInput();
     }
+
+    public function show_link($id)
+    {
+        
+    }
+
 }

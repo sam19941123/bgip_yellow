@@ -33,7 +33,12 @@
         </tr>
         <tr>
             <td><b>相關連結</b></td>
-            <td><a href="https://boardgamegeek.com/boardgame/{{$data->bggid}}"target="_blank">BGG</a></td>
+            <td>
+                <a href="https://boardgamegeek.com/boardgame/{{$data->bggid}}"target="_blank">BGG</a>
+                @foreach($links as $url)
+                    <a href="{{ $url->link }}"target="_blank">{{ $url->title }}</a>
+                @endforeach
+            </td>
             <td><!-- Button trigger modal -->
                 <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
                 新增連結
