@@ -43,7 +43,7 @@
         <tr>
             <td></td>
             <td>
-                <a href="{{ url()->previous() }}" class="btn btn-primary">回到上一頁</a>
+                <a href="{{ url('game?bgname='.session('keyword')) }}" class="btn btn-primary">回到上一頁</a>
             </td>
         </tr>
     </table>
