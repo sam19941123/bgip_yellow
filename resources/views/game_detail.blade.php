@@ -34,9 +34,9 @@
         <tr>
             <td><b>相關連結</b></td>
             <td>
-                <a href="https://boardgamegeek.com/boardgame/{{$data->bggid}}"target="_blank">BGG</a>
+                <a href="https://boardgamegeek.com/boardgame/{{$data->bggid}}"target="_blank">BGG</a><br>
                 @foreach($links as $url)
-                    <a href="{{ $url->link }}"target="_blank">{{ $url->title }}</a>
+                    <a href="{{ $url->link }}"target="_blank">{{ $url->title }}</a><br>
                 @endforeach
             </td>
             <td><!-- Button trigger modal -->
@@ -67,11 +67,11 @@
          <form method="GET" action="/link/{{$data->bggid}}" role="form">
             <div class="form-group">
                 <label for="input_title">連結標題</label>
-                <input type="text" class="form-control" name="title"  placeholder="輸入標題">
+                <input type="text" class="form-control" name="title" placeholder="輸入標題">
             </div>
             <div class="form-group">
                  <label for="input_url">連結</label>
-                 <input type="text" class="form-control" name="url"  placeholder="輸入連結">
+                 <input type="url" class="form-control" name="url"  placeholder="輸入連結">
             </div>
             <button type="submit" class="btn btn-default">送出</button>
         </form>
