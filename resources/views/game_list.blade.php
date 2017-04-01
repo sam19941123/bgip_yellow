@@ -33,7 +33,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h5 class="text-center">{{ $game->name_eng }}</h5>
+                        <h5 class="text-center">{{ $game->name_english }}</h5>
                     </td>
                 </tr>
                 <tr>

@@ -10,7 +10,7 @@ class search extends Controller
     public function get_list()
     {
         $keyword = $_GET['bgname'];
-        $game_list = DB::table('games')->where('name_eng','like','%'.$keyword.'%')->get();
+        $game_list = DB::table('games')->where('name_english','like','%'.$keyword.'%')->get();
         session(['keyword' => $keyword]);
 
         if(count($game_list) == 1)

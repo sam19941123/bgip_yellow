@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title',$data->name_eng)
+@section('title',$data->name_english)
 
 @section('content')
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
         </tr>
         <tr>
             <td><b>英文名稱</b></td>
-            <td>{{ $data->name_eng }}</td>
+            <td>{{ $data->name_english }}</td>
         </tr>
         <tr>
             <td><b>中文名稱</b></td>
