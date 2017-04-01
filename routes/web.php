@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/game','search@get_list');
 Route::get('/game/{id}','search@get_game_detail');
 Route::get('/link/{id}','link@put_me_in');
+Route::get('/comment/{id}','comment@shut_up');
+

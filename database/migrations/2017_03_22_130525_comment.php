@@ -14,11 +14,11 @@ class Comment extends Migration
     public function up()
     {
         Schema::create('comment', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->string('bggid');
-            $table->string('username')->unique();
+            $table->string('username');
             $table->string('like');
-            $table->string('description')
+            $table->string('description');
             $table->timestamps();
         });
     }

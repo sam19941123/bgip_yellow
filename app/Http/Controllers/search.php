@@ -25,6 +25,7 @@ class search extends Controller
     {
         $game_data = DB::table('games')->where('bggid',$id)->get()->first();
         $some_link = DB::table('link')->where('bggid',$id)->get();
-        return view('game_detail',['data'=>$game_data,'links'=>$some_link]);
+        $some_comment = DB::table('comment')->where('bggid',$id)->get();
+        return view('game_detail',['data'=>$game_data,'links'=>$some_link,'comments'=>$some_comment]);
     }
 }
