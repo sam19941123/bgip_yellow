@@ -18,6 +18,11 @@ class comment extends Controller
         DB::table('comment')->insert(
         ['bggid' => $id, 'username' => $username,  'description' => $description, 'like'=>$like]
         );
+
+        if($like == 0)
+            DB::table('games')->where('bggid',$id)->increment('bad');
+        else if($like == 1)
+            DB::table('games')->where('bggid',$id)->increment('good');
         
          return back()->withInput();
     }

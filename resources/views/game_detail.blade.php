@@ -69,7 +69,7 @@ $(document).ready(function(){
     <table class="table table-bordered"
         <tr>
             
-            <h4><b>評論</b></h4>
+            <h4><b>評論 </b><font style="color:green">{{ $data->good }}</font> vs <font style="color:red">{{ $data->bad }}</font></h4>
             
         </tr>
         @foreach($comments as $com)
