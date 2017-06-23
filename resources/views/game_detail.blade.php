@@ -66,6 +66,7 @@ $(document).ready(function(){
            
         </tr>
     </table>
+<<<<<<< HEAD
     <table class="table table-bordered"
         <tr>
             
@@ -82,11 +83,49 @@ $(document).ready(function(){
             @endif
             <td> {{$com->description }} </td>
             
+=======
+>>>>>>> 中文
         
-        </tr>
-        @endforeach
 
-    </table>    
+
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#comment" aria-controls="comment" role="tab" data-toggle="tab">評論<font style="color:green">{{ $data->good }}</font> vs <font style="color:red">{{ $data->bad }}</font></a></li>
+    <li role="presentation"><a href="#files" aria-controls="files" role="tab" data-toggle="tab">檔案</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="comment">
+        <table class="table table-bordered"
+        <tr><br></tr>
+                @foreach($comments as $com)
+                <tr>
+                    <td><b> {{ $com->username }}</b></td>
+                    @if($com->like == 0)
+                    <td class="text-center danger" ><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></td>
+                    @else
+                    <td class="text-center success"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></td>
+                    @endif
+                    <td> {{$com->description }} </td>
+                    
+                
+                </tr>
+                @endforeach
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="files">這裡放中文資料</div>
+  </div>
+
+</div>
+
+
+
+
+
     <table class="table text-center">    
         <tr>
             

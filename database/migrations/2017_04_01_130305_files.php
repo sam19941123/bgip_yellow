@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Comment extends Migration
+class Files extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Comment extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table) {
+        Schema::create('files', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->string('bggid');
             $table->string('username');
-            $table->string('like');
+            $table->string('title');
+            $table->string('link');
             $table->string('description');
             $table->timestamps();
         });
@@ -30,6 +31,6 @@ class Comment extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');
+        Schema::dropIfExists('files');
     }
 }
